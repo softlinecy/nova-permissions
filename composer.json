@@ -1,5 +1,5 @@
 {
-    "name": "eminiarts/nova-permissions",
+    "name": "softlinecy/nova-permissions",
     "description": "Laravel Nova Grouped Permissions.",
     "keywords": [
         "laravel",
@@ -8,7 +8,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.2.0",
-        "spatie/laravel-permission": "3.*"
+        "spatie/laravel-permission": "4.*"
     },
     "autoload": {
         "psr-4": {
