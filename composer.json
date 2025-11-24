@@ -1,7 +1,7 @@
 {
     "name": "softlinecy/nova-permissions",
     "description": "Laravel Nova Grouped Permissions.",
-    "version": "4.0.2",
+    "version": "4.0.2.1",
     "keywords": [
         "laravel",
         "nova"
@@ -26,6 +26,6 @@
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
