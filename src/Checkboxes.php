@@ -19,7 +19,7 @@ class Checkboxes extends Field
      * @param  array  $options
      * @return self
      */
-    public function options(array $options)
+    public function options(array $options):self
     {
         return $this->withMeta(['options' => $options]);
     }
@@ -27,7 +27,7 @@ class Checkboxes extends Field
     /**
      * Disable type casting of array keys to numeric values to return the unmodified keys.
      */
-    public function withGroups()
+    public function withGroups():self
     {
         return $this->withMeta(['withGroups' => true]);
     }
@@ -41,7 +41,7 @@ class Checkboxes extends Field
      * @param  string                                  $attribute
      * @return void
      */
-    protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute)
+    protected function fillAttributeFromRequest(NovaRequest $request, $requestAttribute, $model, $attribute):void
     {
         if ($request->exists($requestAttribute)) {
             /**

@@ -10,7 +10,6 @@ use Illuminate\Validation\Rule;
 use Laravel\Nova\Fields\Select;
 use Laravel\Nova\Fields\MorphToMany;
 use Laravel\Nova\Fields\BelongsToMany;
-use Eminiarts\NovaPermissions\Nova\Role;
 use Spatie\Permission\Models\Permission as SpatiePermission;
 
 class Permission extends Resource
@@ -49,7 +48,7 @@ class Permission extends Resource
      * @param  \Illuminate\Http\Request $request
      * @return array
      */
-    public function actions(Request $request)
+    public function actions(Request $request):array
     {
         return [
         ];
@@ -61,7 +60,7 @@ class Permission extends Resource
      * @param  \Illuminate\Http\Request $request
      * @return array
      */
-    public function cards(Request $request)
+    public function cards(Request $request):array
     {
         return [];
     }
@@ -72,7 +71,7 @@ class Permission extends Resource
      * @param  \Illuminate\Http\Request $request
      * @return array
      */
-    public function fields(Request $request)
+    public function fields(Request $request):array
     {
         $guardOptions = collect(config('auth.guards'))->mapWithKeys(function ($value, $key) {
             return [$key => $key];
@@ -110,7 +109,7 @@ class Permission extends Resource
      * @param  \Illuminate\Http\Request $request
      * @return array
      */
-    public function filters(Request $request)
+    public function filters(Request $request):array
     {
         return [];
     }
@@ -120,7 +119,7 @@ class Permission extends Resource
         //return app(PermissionRegistrar::class)->getPermissionClass();
     }
 
-    public static function label()
+    public static function label():string
     {
         return __('Permissions');
     }
@@ -131,12 +130,12 @@ class Permission extends Resource
      * @param  \Illuminate\Http\Request $request
      * @return array
      */
-    public function lenses(Request $request)
+    public function lenses(Request $request):array
     {
         return [];
     }
 
-    public static function singularLabel()
+    public static function singularLabel():string
     {
         return __('Permission');
     }

@@ -1,7 +1,7 @@
 {
     "name": "softlinecy/nova-permissions",
     "description": "Laravel Nova Grouped Permissions.",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "keywords": [
         "laravel",
         "nova"
